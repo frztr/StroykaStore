@@ -1,0 +1,274 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Light.eot");
+  src: url("../font/Manrope-Light.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Light.woff2") format("woff2"), url("../font/Manrope-Light.woff") format("woff"), url("../font/Manrope-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-SemiBold.eot");
+  src: url("../font/Manrope-SemiBold.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-SemiBold.woff2") format("woff2"), url("../font/Manrope-SemiBold.woff") format("woff"), url("../font/Manrope-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-ExtraBold.eot");
+  src: url("../font/Manrope-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-ExtraBold.woff2") format("woff2"), url("../font/Manrope-ExtraBold.woff") format("woff"), url("../font/Manrope-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Medium.eot");
+  src: url("../font/Manrope-Medium.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Medium.woff2") format("woff2"), url("../font/Manrope-Medium.woff") format("woff"), url("../font/Manrope-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Regular.eot");
+  src: url("../font/Manrope-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Regular.woff2") format("woff2"), url("../font/Manrope-Regular.woff") format("woff"), url("../font/Manrope-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Bold.eot");
+  src: url("../font/Manrope-Bold.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Bold.woff2") format("woff2"), url("../font/Manrope-Bold.woff") format("woff"), url("../font/Manrope-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-ExtraLight.eot");
+  src: url("../font/Manrope-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-ExtraLight.woff2") format("woff2"), url("../font/Manrope-ExtraLight.woff") format("woff"), url("../font/Manrope-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  background-color: #2F323A;
+}
+
+:root {
+  font-family: "Manrope";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope";
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.blockcontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1440px;
+  align-self: center;
+  width: 100%;
+}
+
+.firstblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+.firstblock .blockcontent .content {
+  margin: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  background: url("../images/b3aff3362ba0ae21892af88334f3207d.png");
+  background-size: cover;
+}
+.firstblock .blockcontent .content .content_desc {
+  margin: 2.5rem 6.25rem 5rem 6.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.firstblock .blockcontent .content .content_desc p.path {
+  color: #454950;
+  font-size: 1rem;
+  line-height: 150%;
+  margin-bottom: 1.25rem;
+}
+.firstblock .blockcontent .content .content_desc p.title {
+  color: #171B24;
+  font-size: 3rem;
+  line-height: 120%;
+  font-weight: 700;
+}
+
+.secondblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+.secondblock .blockcontent .brands {
+  margin: 2.5rem 8.75rem;
+}
+.secondblock .blockcontent .brands .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.secondblock .blockcontent .brands .title p {
+  font-size: 2.125rem;
+  font-weight: 600;
+}
+.secondblock .blockcontent .brands .title button {
+  border: 0.06rem solid #D1D1D3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem 0.75rem 1.5rem;
+  background-color: #FFFFFF;
+}
+.secondblock .blockcontent .brands .title button p {
+  font-size: 1.125rem;
+  line-height: 1.33rem;
+}
+.secondblock .blockcontent .brands .title button img {
+  height: 1.5rem;
+  aspect-ratio: 1/1;
+  margin-left: 0.5rem;
+}
+.secondblock .blockcontent .brands .title button:hover {
+  background-color: #171B24;
+}
+.secondblock .blockcontent .brands .brandsblock {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+}
+.secondblock .blockcontent .brands .brandsblock div.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: solid 0.06rem #E8E9EA;
+}
+.secondblock .blockcontent .brands .brandsblock div.img img {
+  max-width: 100%;
+  height: -webkit-fill-available;
+}
+.secondblock .blockcontent .brands .brandsblock div.img:hover {
+  border: solid 0.06rem #5D6066;
+}
+
+.thirdblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+.thirdblock .blockcontent .brands_list {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem 8.75rem 5rem 8.75rem;
+}
+.thirdblock .blockcontent .brands_list .alphavite {
+  display: row;
+  flex-wrap: wrap;
+}
+.thirdblock .blockcontent .brands_list .alphavite button {
+  background-color: #FFFFFF;
+  color: #171B24;
+  font-size: 1.125rem;
+  line-height: 136%;
+  padding: 0.25rem 0.75rem;
+  border: 0.06rem solid #D1D1D3;
+  margin-right: 0.5rem;
+  margin-bottom: 0.75rem;
+  transition: all 0.3s ease;
+}
+.thirdblock .blockcontent .brands_list .alphavite button:hover {
+  background-color: #FCEC41;
+  border: 0.06rem solid #FCEC41;
+  transition: all 0.3s ease;
+}
+.thirdblock .blockcontent .brands_list .alphavite button.checked {
+  background-color: #FCEC41;
+  border: 0.06rem solid #FCEC41;
+  transition: all 0.3s ease;
+}
+.thirdblock .blockcontent .brands_list .list .list_item:last-of-type {
+  border-bottom: none;
+}
+.thirdblock .blockcontent .brands_list .list .list_item {
+  padding: 1.75rem 0;
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  border-bottom: 0.06rem #E8E9EA solid;
+}
+.thirdblock .blockcontent .brands_list .list .list_item .char {
+  width: 100%;
+  text-align: left;
+  font-size: 2.125rem;
+  line-height: 130%;
+  color: #171B24;
+}
+.thirdblock .blockcontent .brands_list .list .list_item .items_div {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  row-gap: 0.75rem;
+}
+.thirdblock .blockcontent .brands_list .list .list_item .items_div a.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.thirdblock .blockcontent .brands_list .list .list_item .items_div a.item div.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.thirdblock .blockcontent .brands_list .list .list_item .items_div a.item div.content .img {
+  display: none;
+  aspect-ratio: 1/1;
+  margin-right: 0.5rem;
+}
+.thirdblock .blockcontent .brands_list .list .list_item .items_div a.item div.content p {
+  color: #2F323A;
+  font-size: 1rem;
+  line-height: 150%;
+}
+.thirdblock .blockcontent .brands_list .list .list_item .items_div a.item:hover div.content .img {
+  display: block;
+}
+
+/*# sourceMappingURL=brands.css.map */

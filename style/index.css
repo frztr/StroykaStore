@@ -1,0 +1,681 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Light.eot");
+  src: url("../font/Manrope-Light.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Light.woff2") format("woff2"), url("../font/Manrope-Light.woff") format("woff"), url("../font/Manrope-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-SemiBold.eot");
+  src: url("../font/Manrope-SemiBold.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-SemiBold.woff2") format("woff2"), url("../font/Manrope-SemiBold.woff") format("woff"), url("../font/Manrope-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-ExtraBold.eot");
+  src: url("../font/Manrope-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-ExtraBold.woff2") format("woff2"), url("../font/Manrope-ExtraBold.woff") format("woff"), url("../font/Manrope-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Medium.eot");
+  src: url("../font/Manrope-Medium.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Medium.woff2") format("woff2"), url("../font/Manrope-Medium.woff") format("woff"), url("../font/Manrope-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Regular.eot");
+  src: url("../font/Manrope-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Regular.woff2") format("woff2"), url("../font/Manrope-Regular.woff") format("woff"), url("../font/Manrope-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Bold.eot");
+  src: url("../font/Manrope-Bold.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Bold.woff2") format("woff2"), url("../font/Manrope-Bold.woff") format("woff"), url("../font/Manrope-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-ExtraLight.eot");
+  src: url("../font/Manrope-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-ExtraLight.woff2") format("woff2"), url("../font/Manrope-ExtraLight.woff") format("woff"), url("../font/Manrope-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  background-color: #2F323A;
+}
+
+:root {
+  font-family: "Manrope";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope";
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.blockcontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1440px;
+  align-self: center;
+  width: 100%;
+}
+
+.firstblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+  background-color: #FFFFFF;
+}
+.firstblock .blockcontent {
+  position: relative;
+}
+.firstblock .blockcontent #slider::-webkit-scrollbar {
+  display: none;
+}
+.firstblock .blockcontent .controls {
+  position: absolute;
+  bottom: 5rem;
+  right: 6.25rem;
+  z-index: 5;
+}
+.firstblock .blockcontent #slider {
+  margin: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+.firstblock .blockcontent #slider .roll {
+  display: flex;
+  flex-direction: row;
+  width: 200%;
+}
+.firstblock .blockcontent #slider .roll > .slide:nth-child(1) {
+  background: url("../images/back.png");
+  background-size: cover;
+}
+.firstblock .blockcontent #slider .roll > .slide:nth-child(2) {
+  background: linear-gradient(to right, #f6f6f6, rgba(246, 246, 246, 0)), url("../images/back2.png");
+  background-size: cover;
+}
+.firstblock .blockcontent #slider .roll .slide {
+  width: 100%;
+}
+.firstblock .blockcontent #slider .roll .slide > .content {
+  padding: 2.5rem 6.25rem;
+  display: flex;
+  flex-direction: row;
+}
+.firstblock .blockcontent #slider .roll .slide > .content .offer {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.firstblock .blockcontent #slider .roll .slide > .content .offer div.offer_desc {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.firstblock .blockcontent #slider .roll .slide > .content .offer div.offer_desc p.title {
+  color: #171B24;
+  font-size: 3rem;
+  line-height: 120%;
+  margin-bottom: 1.25rem;
+  font-weight: bold;
+}
+.firstblock .blockcontent #slider .roll .slide > .content .offer div.offer_desc p.addiction {
+  color: #454950;
+  font-size: 1.25rem;
+  line-height: 140%;
+}
+.firstblock .blockcontent #slider .roll .slide > .content .offer button {
+  margin-top: 2.5rem;
+  padding: 0.75rem 1.5rem;
+  color: #171B24;
+  font-size: 1.125rem;
+  line-height: 1.33em;
+  align-self: start;
+}
+
+.controls {
+  align-self: flex-end;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0.75rem;
+}
+.controls button {
+  background-color: #FFFFFF;
+  padding: 0.875rem;
+  border: 0.06rem solid #D1D1D3;
+}
+.controls button div.content svg.img {
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+div.buy {
+  display: flex;
+  flex-direction: column;
+}
+div.buy div.counter {
+  display: none;
+  grid-template-columns: min-content 1fr min-content;
+  border: 0.06rem #D1D1D3 solid;
+}
+div.buy div.counter button.button {
+  padding: 0.75rem;
+  background-color: #FFFFFF;
+}
+div.buy div.counter button.button:hover {
+  background-color: #171B24;
+}
+div.buy div.counter input {
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 136%;
+  color: black;
+  border: none;
+  border-left: 0.06rem #D1D1D3 solid;
+  border-right: 0.06rem #D1D1D3 solid;
+  min-width: 0;
+}
+div.buy div.counter input::-webkit-outer-spin-button,
+div.buy div.counter input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+div.buy > button.button {
+  display: initial;
+}
+div.buy > button.button .content {
+  justify-content: center;
+}
+
+div.buy.counter_show > button.button {
+  display: none;
+}
+div.buy.counter_show div.counter {
+  display: grid;
+}
+
+.secondblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+  background-color: #FFFFFF;
+}
+.secondblock .blockcontent > div {
+  margin: 2.5rem 8.75rem;
+}
+.secondblock .blockcontent > *:last-child {
+  margin-bottom: 5rem;
+}
+.secondblock .blockcontent .promos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.secondblock .blockcontent .promos .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.secondblock .blockcontent .promos .title p {
+  font-size: 2.125rem;
+  font-weight: 600;
+}
+.secondblock .blockcontent .promos .title button {
+  border: 0.06rem solid #D1D1D3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem 0.75rem 1.5rem;
+  background-color: #FFFFFF;
+}
+.secondblock .blockcontent .promos .title button p {
+  font-size: 1.125rem;
+  line-height: 1.33rem;
+}
+.secondblock .blockcontent .promos .title button img {
+  height: 1.5rem;
+  aspect-ratio: 1/1;
+  margin-left: 0.5rem;
+}
+.secondblock .blockcontent .promos .title button:hover {
+  background-color: #171B24;
+}
+.secondblock .blockcontent .promos .promoblock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+}
+.secondblock .blockcontent .promos .promoblock .promo {
+  display: grid;
+  grid-template-columns: 278fr 294fr;
+}
+.secondblock .blockcontent .promos .promoblock .promo .img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.secondblock .blockcontent .promos .promoblock .promo .img img {
+  width: 100%;
+}
+.secondblock .blockcontent .promos .promoblock .promo .img .promo_size {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border: 0.125rem solid #FCEC41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+.secondblock .blockcontent .promos .promoblock .promo .img .promo_size p {
+  font-size: 0.9375rem;
+  line-height: 145%;
+  padding: 0.25rem 0.5rem;
+}
+.secondblock .blockcontent .promos .promoblock .promo .desc {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.secondblock .blockcontent .promos .promoblock .promo .desc .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: -webkit-fill-available;
+  margin-bottom: 1rem;
+}
+.secondblock .blockcontent .promos .promoblock .promo .desc .text p.name {
+  font-size: 1rem;
+}
+.secondblock .blockcontent .promos .promoblock .promo .desc .text div.price {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.secondblock .blockcontent .promos .promoblock .promo .desc .text div.price p.today {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #171B24;
+  margin-right: 0.5rem;
+}
+.secondblock .blockcontent .promos .promoblock .promo .desc .text div.price p.last {
+  text-decoration: line-through;
+  font-size: 1rem;
+  color: #8B8D92;
+}
+.secondblock .blockcontent .categories .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.secondblock .blockcontent .categories .title p {
+  font-size: 2.125rem;
+  font-weight: 600;
+}
+.secondblock .blockcontent .categories .title button {
+  border: 0.06rem solid #D1D1D3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem 0.75rem 1.5rem;
+  background-color: #FFFFFF;
+}
+.secondblock .blockcontent .categories .title button p {
+  font-size: 1.125rem;
+  line-height: 1.33rem;
+}
+.secondblock .blockcontent .categories .title button img {
+  height: 1.5rem;
+  aspect-ratio: 1/1;
+  margin-left: 0.5rem;
+}
+.secondblock .blockcontent .categories .title button:hover {
+  background-color: #171B24;
+}
+.secondblock .blockcontent .categories .categoriesblock {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+}
+.secondblock .blockcontent .categories .categoriesblock .category {
+  background-color: #F6F6F6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  aspect-ratio: 1/1;
+  transition: all 0.3s ease;
+}
+.secondblock .blockcontent .categories .categoriesblock .category div.name {
+  height: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.secondblock .blockcontent .categories .categoriesblock .category div.name p {
+  color: #2F323A;
+  font-size: clamp(0.5rem, 0.95vw, 1.125rem);
+  line-height: 1.33em;
+  text-align: center;
+}
+.secondblock .blockcontent .categories .categoriesblock .category div.img {
+  height: 65%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.secondblock .blockcontent .categories .categoriesblock .category div.img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.secondblock .blockcontent .categories .categoriesblock .category:hover {
+  background-color: #FCEC41;
+}
+.secondblock .blockcontent .products .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.secondblock .blockcontent .products .title p {
+  font-size: 2.125rem;
+  font-weight: 600;
+}
+.secondblock .blockcontent .products .title button {
+  border: 0.06rem solid #D1D1D3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem 0.75rem 1.5rem;
+  background-color: #FFFFFF;
+}
+.secondblock .blockcontent .products .title button p {
+  font-size: 1.125rem;
+  line-height: 1.33rem;
+}
+.secondblock .blockcontent .products .title button img {
+  height: 1.5rem;
+  aspect-ratio: 1/1;
+  margin-left: 0.5rem;
+}
+.secondblock .blockcontent .products .title button:hover {
+  background-color: #171B24;
+}
+.secondblock .blockcontent .products .products_block {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+.secondblock .blockcontent .products .products_block .product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 26rem;
+  border: 0.06rem solid #E8E9EA;
+}
+.secondblock .blockcontent .products .products_block .product div.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  min-height: 50%;
+  max-height: 50%;
+}
+.secondblock .blockcontent .products .products_block .product div.img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.secondblock .blockcontent .products .products_block .product .desc {
+  border-top: 0.06rem solid #E8E9EA;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  height: 50%;
+  width: -webkit-fill-available;
+}
+.secondblock .blockcontent .products .products_block .product .desc .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-bottom: 1rem;
+}
+.secondblock .blockcontent .products .products_block .product .desc .text p.name {
+  color: #2F323A;
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+.secondblock .blockcontent .products .products_block .product .desc .text p.price {
+  color: #171B24;
+  font-size: 1.25rem;
+  line-height: 140%;
+  font-weight: bold;
+}
+.secondblock .blockcontent .brands .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.secondblock .blockcontent .brands .title p {
+  font-size: 2.125rem;
+  font-weight: 600;
+}
+.secondblock .blockcontent .brands .title button {
+  border: 0.06rem solid #D1D1D3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1rem 0.75rem 1.5rem;
+  background-color: #FFFFFF;
+}
+.secondblock .blockcontent .brands .title button p {
+  font-size: 1.125rem;
+  line-height: 1.33rem;
+}
+.secondblock .blockcontent .brands .title button img {
+  height: 1.5rem;
+  aspect-ratio: 1/1;
+  margin-left: 0.5rem;
+}
+.secondblock .blockcontent .brands .title button:hover {
+  background-color: #171B24;
+}
+.secondblock .blockcontent .brands .brandsblock {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+}
+.secondblock .blockcontent .brands .brandsblock div.img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: solid 0.06rem #E8E9EA;
+}
+.secondblock .blockcontent .brands .brandsblock div.img img {
+  max-width: 100%;
+  height: -webkit-fill-available;
+}
+.secondblock .blockcontent .brands .brandsblock div.img:hover {
+  border: solid 0.06rem #5D6066;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+  background-color: #F6F6F6;
+}
+.comments .blockcontent > .content {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+}
+.comments .blockcontent > .content .title {
+  margin: 0 8.75rem 1rem 8.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.comments .blockcontent > .content .title p {
+  font-size: 2.125rem;
+  line-height: 1.3em;
+  font-weight: 600;
+}
+.comments .blockcontent > .content .commentsblock {
+  display: flex;
+  flex-direction: row;
+  padding: 0 8.75rem;
+}
+.comments .blockcontent > .content .commentsblock div.roll::-webkit-scrollbar {
+  display: none;
+}
+.comments .blockcontent > .content .commentsblock div.roll {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+}
+.comments .blockcontent > .content .commentsblock div.roll .comment {
+  min-width: 23.5rem;
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-right: 1rem;
+}
+.comments .blockcontent > .content .commentsblock div.roll .comment .comment_content {
+  margin-bottom: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  width: -webkit-fill-available;
+}
+.comments .blockcontent > .content .commentsblock div.roll .comment .comment_content .head {
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  width: -webkit-fill-available;
+}
+.comments .blockcontent > .content .commentsblock div.roll .comment .comment_content .head img.logo {
+  height: 3.25rem;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+}
+.comments .blockcontent > .content .commentsblock div.roll .comment .comment_content .head p.name {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.5em;
+  margin-left: 0.75rem;
+}
+.comments .blockcontent > .content .commentsblock div.roll .comment .comment_content .head img.quote {
+  height: 1.5rem;
+  align-items: flex-start;
+}
+.comments .blockcontent > .content .commentsblock div.roll .comment .comment_content p.text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #2F323A;
+}
+.comments .blockcontent > .content .commentsblock div.roll .comment p.date {
+  color: #8B8D92;
+  font-size: 0.9375rem;
+  line-height: 145%;
+}
+.comments .blockcontent > .content .commentsblock div.roll :last-child() {
+  margin-right: 0;
+}
+
+.aboutcompany {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+  background-color: #FFFFFF;
+}
+.aboutcompany .blockcontent .content {
+  margin: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutcompany .blockcontent .content .block {
+  background-image: url("../images/CompanyBack.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.aboutcompany .blockcontent .content .block div.text {
+  margin: 5.5rem 45% 5.5rem 15%;
+}
+.aboutcompany .blockcontent .content .block div.text p {
+  color: #2F323A;
+}
+.aboutcompany .blockcontent .content .block div.text .title {
+  font-size: 2.125rem;
+  line-height: 130%;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.aboutcompany .blockcontent .content .block div.text .desc {
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,258 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Light.eot");
+  src: url("../font/Manrope-Light.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Light.woff2") format("woff2"), url("../font/Manrope-Light.woff") format("woff"), url("../font/Manrope-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-SemiBold.eot");
+  src: url("../font/Manrope-SemiBold.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-SemiBold.woff2") format("woff2"), url("../font/Manrope-SemiBold.woff") format("woff"), url("../font/Manrope-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-ExtraBold.eot");
+  src: url("../font/Manrope-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-ExtraBold.woff2") format("woff2"), url("../font/Manrope-ExtraBold.woff") format("woff"), url("../font/Manrope-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Medium.eot");
+  src: url("../font/Manrope-Medium.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Medium.woff2") format("woff2"), url("../font/Manrope-Medium.woff") format("woff"), url("../font/Manrope-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Regular.eot");
+  src: url("../font/Manrope-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Regular.woff2") format("woff2"), url("../font/Manrope-Regular.woff") format("woff"), url("../font/Manrope-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Bold.eot");
+  src: url("../font/Manrope-Bold.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Bold.woff2") format("woff2"), url("../font/Manrope-Bold.woff") format("woff"), url("../font/Manrope-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-ExtraLight.eot");
+  src: url("../font/Manrope-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-ExtraLight.woff2") format("woff2"), url("../font/Manrope-ExtraLight.woff") format("woff"), url("../font/Manrope-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  background-color: #2F323A;
+}
+
+:root {
+  font-family: "Manrope";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope";
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.blockcontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1440px;
+  align-self: center;
+  width: 100%;
+}
+
+.firstblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+.firstblock .blockcontent .content {
+  margin: 2.5rem;
+  background-image: url("../images/a23c95f50113075fdfc56a4a60eb47eb.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.firstblock .blockcontent .content .desc {
+  margin: 2.5rem 6.125rem 3.75rem 6.125rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 45%;
+}
+.firstblock .blockcontent .content .desc p:nth-of-type(1) {
+  color: #454950;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.firstblock .blockcontent .content .desc p:nth-of-type(2) {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 120%;
+  color: #171B24;
+  margin-bottom: 1.25rem;
+}
+.firstblock .blockcontent .content .desc p:nth-of-type(3) {
+  color: #2F323A;
+  font-size: 1.25rem;
+  line-height: 150%;
+}
+
+.secondblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+.secondblock .blockcontent .content {
+  margin: 2.5rem 8.75rem;
+  display: flex;
+  flex-direction: column;
+}
+.secondblock .blockcontent .content p.title {
+  color: #2F323A;
+  font-size: 2.125rem;
+  line-height: 130%;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+.secondblock .blockcontent .content div.steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+.secondblock .blockcontent .content div.steps .step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.secondblock .blockcontent .content div.steps .step .img {
+  height: 5rem;
+  aspect-ratio: 1/1;
+  justify-self: baseline;
+  margin-bottom: 0.75rem;
+}
+.secondblock .blockcontent .content div.steps .step p {
+  color: #2F323A;
+  font-size: 1rem;
+  line-height: 150%;
+}
+
+.thirdblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+.thirdblock .blockcontent .content {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem 8.75rem 5rem 8.75rem;
+  padding: 5rem 12.25rem;
+}
+.thirdblock .blockcontent .content .questions_block {
+  display: flex;
+  flex-direction: column;
+}
+.thirdblock .blockcontent .content .questions_block p.title {
+  font-weight: 600;
+  color: #2F323A;
+  font-size: 2.125rem;
+  line-height: 130%;
+  margin-bottom: 1.25rem;
+}
+.thirdblock .blockcontent .content .questions_block .questions {
+  display: flex;
+  flex-direction: column;
+}
+.thirdblock .blockcontent .content .questions_block .questions .question {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: #F6F6F6;
+  margin-bottom: 0.75rem;
+}
+.thirdblock .blockcontent .content .questions_block .questions .question > div {
+  width: 100%;
+}
+.thirdblock .blockcontent .content .questions_block .questions .question .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.thirdblock .blockcontent .content .questions_block .questions .question .title p {
+  font-size: 1.125rem;
+  line-height: 136%;
+  text-align: left;
+}
+.thirdblock .blockcontent .content .questions_block .questions .question .title img.img {
+  margin-left: 1rem;
+  height: 1.5rem;
+  transform: rotate(0deg);
+  transition: all 0.3s ease;
+}
+.thirdblock .blockcontent .content .questions_block .questions .question .title.show img.img {
+  transform: rotate(180deg);
+  transition: all 0.3s ease;
+}
+.thirdblock .blockcontent .content .questions_block .questions .question div.desc {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3.5rem;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+}
+.thirdblock .blockcontent .content .questions_block .questions .question div.desc p {
+  font-size: 1rem;
+  line-height: 150%;
+  color: #2F323A;
+  text-align: left;
+}
+.thirdblock .blockcontent .content .questions_block .question.show div.desc {
+  opacity: 1;
+  margin-top: 1rem;
+  height: auto;
+}
+
+/*# sourceMappingURL=delivery.css.map */

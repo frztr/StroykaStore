@@ -1,0 +1,191 @@
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Light.eot");
+  src: url("../font/Manrope-Light.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Light.woff2") format("woff2"), url("../font/Manrope-Light.woff") format("woff"), url("../font/Manrope-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-SemiBold.eot");
+  src: url("../font/Manrope-SemiBold.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-SemiBold.woff2") format("woff2"), url("../font/Manrope-SemiBold.woff") format("woff"), url("../font/Manrope-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-ExtraBold.eot");
+  src: url("../font/Manrope-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-ExtraBold.woff2") format("woff2"), url("../font/Manrope-ExtraBold.woff") format("woff"), url("../font/Manrope-ExtraBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Medium.eot");
+  src: url("../font/Manrope-Medium.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Medium.woff2") format("woff2"), url("../font/Manrope-Medium.woff") format("woff"), url("../font/Manrope-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Regular.eot");
+  src: url("../font/Manrope-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Regular.woff2") format("woff2"), url("../font/Manrope-Regular.woff") format("woff"), url("../font/Manrope-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-Bold.eot");
+  src: url("../font/Manrope-Bold.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-Bold.woff2") format("woff2"), url("../font/Manrope-Bold.woff") format("woff"), url("../font/Manrope-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manrope";
+  src: url("../font/Manrope-ExtraLight.eot");
+  src: url("../font/Manrope-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../font/Manrope-ExtraLight.woff2") format("woff2"), url("../font/Manrope-ExtraLight.woff") format("woff"), url("../font/Manrope-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  background-color: #2F323A;
+}
+
+:root {
+  font-family: "Manrope";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Manrope";
+  font-weight: 500;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+input:focus {
+  outline: none;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.blockcontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1440px;
+  align-self: center;
+  width: 100%;
+}
+
+.firstblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+}
+.firstblock .blockcontent .content {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem 8.75rem;
+}
+.firstblock .blockcontent .content .title p.path {
+  color: #454950;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  line-height: 150%;
+}
+.firstblock .blockcontent .content .title p.name {
+  color: #171B24;
+  font-size: 3rem;
+  line-height: 120%;
+  font-weight: 700;
+}
+.firstblock .blockcontent .content .map {
+  margin-top: 2.5rem;
+  aspect-ratio: 58/17;
+}
+.firstblock .blockcontent .content .map .iframe {
+  width: 100%;
+  height: 100%;
+}
+.firstblock .blockcontent .content .contacts_div {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem 0;
+}
+.firstblock .blockcontent .content .contacts_div .title {
+  font-weight: 600;
+  font-size: 2.125rem;
+  line-height: 130%;
+  color: #2F323A;
+  margin-bottom: 1.25rem;
+}
+.firstblock .blockcontent .content .contacts_div .info {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 376fr 474fr 278fr;
+}
+.firstblock .blockcontent .content .contacts_div .info p {
+  font-size: 1.125rem;
+  line-height: 150%;
+  color: #2F323A;
+}
+
+.aboutcompany {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFFFFF;
+  background-color: #FFFFFF;
+}
+.aboutcompany .blockcontent .content {
+  margin: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutcompany .blockcontent .content .block {
+  background-image: url("../images/CompanyBack.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.aboutcompany .blockcontent .content .block div.text {
+  margin: 5.5rem 45% 5.5rem 15%;
+}
+.aboutcompany .blockcontent .content .block div.text p {
+  color: #2F323A;
+}
+.aboutcompany .blockcontent .content .block div.text .title {
+  font-size: 2.125rem;
+  line-height: 130%;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.aboutcompany .blockcontent .content .block div.text .desc {
+  font-size: 1rem;
+  line-height: 1.5em;
+}
+
+/*# sourceMappingURL=contacts.css.map */

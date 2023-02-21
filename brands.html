@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css" type="text/css" />
+    <link rel="stylesheet" href="style/page.css" type="text/css" />
+    <link rel="stylesheet" href="style/brands.css" type="text/css" />
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/brands.js"></script>
+  </head>
+  <body>
+    <script>
+      load_header($("body"));
+    </script>
+    <div class="firstblock">
+      <div class="blockcontent">
+        <div class="content">
+          <div class="content_desc">
+            <p class="path">Главная → Все продавцы</p>
+            <p class="title">Все бренды</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="secondblock">
+      <div class="blockcontent">
+        <div class="brands">
+          <div class="title">
+            <p>Популярные бренды</p>
+            <button class="button">
+              <div class="content">
+                <p>Все бренды</p>
+                <svg
+                  class="img"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18L15 12L9 6"
+                    stroke="parent"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div id="brandsblock" class="brandsblock"></div>
+
+          <script>
+            load_brands();
+          </script>
+        </div>
+      </div>
+    </div>
+    <div class="thirdblock">
+      <div class="blockcontent">
+        <div class="brands_list">
+          <div id="alphavite" class="alphavite">
+          </div>
+          <script>load_alphavite();</script>
+          <div id="brands_list_content" class="list">
+            
+        </div>
+      </div>
+    </div>
+    <script>
+      load_all_brands();
+      load_footer($("body"));
+    </script>
+  </body>
+</html>

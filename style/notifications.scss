@@ -1,0 +1,74 @@
+@import "style.scss";
+
+body {
+    position: relative;
+}
+
+.shopping_cart_notification {
+    
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 1rem;
+        align-items: stretch;
+        padding: 1rem;
+
+        div.product {
+            width: -webkit-fill-available;
+            display: flex;
+            flex-direction: row;
+
+            img {
+                margin: 0.25rem;
+                margin-right: 0.75rem;
+                max-width: 15%;
+                max-height: 100%;
+                height: -webkit-fill-available;
+                object-fit: contain;
+            }
+
+            div.desc {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                max-width: 80%;
+
+                div.product_info {
+                    p {
+                        font-size: 0.8rem;
+                        line-height: 140%;
+                        color: $black;
+                    }
+
+                    p.name {
+                        margin-bottom: 0.25rem;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
+
+                    p.price {
+                        font-weight: 700;
+                    }
+                }
+
+                a.get_to_cart::before {
+                    content: 'Перейти в корзину';
+
+                }
+
+                a.get_to_cart {
+                    color: $grayblack;
+                    font-size: 0.75rem;
+                }
+
+                a.get_to_cart:hover {
+                    color: $black;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    position: relative;
+}

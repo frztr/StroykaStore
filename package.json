@@ -1,0 +1,23 @@
+{
+  "scripts": {
+    "build": "npm run style && npm run index && npm run page && npm run brands && npm run notifications && npm run delivery && npm run refund && npm run documentation && npm run contacts && npm run lk",
+    "style": "sass style/style.scss style/style.css",
+    "index": "sass style/index.scss style/index.css",
+    "page": "sass style/page.scss style/page.css",
+    "brands": "sass style/brands.scss style/brands.css",
+    "notifications": "sass style/notifications.scss style/notifications.css",
+    "delivery": "sass style/delivery.scss style/delivery.css",
+    "refund": "sass style/refund.scss style/refund.css",
+    "documentation": "sass style/documentation.scss style/documentation.css",
+    "contacts": "sass style/contacts.scss style/contacts.css",
+    "lk": "sass style/lk.scss style/lk.css"
+  },
+  "type": "module",
+  "name": "stroykastore",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

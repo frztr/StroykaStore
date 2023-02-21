@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+    <link rel="stylesheet" href="style/style.css" type="text/css" />
+    <link rel="stylesheet" href="style/page.css" type="text/css" />
+    <link rel="stylesheet" href="style/index.css" type="text/css" />
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/page.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+  <body>
+    <script>
+      load_header($("body"));
+    </script>
+    <div class="firstblock">
+      <div class="blockcontent">
+        <div class="controls">
+          <button id="slider_left" class="button">
+            <div class="content">
+              <svg
+                class="img"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 12H5"
+                  stroke="parent"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 5L5 12L12 19"
+                  stroke="parent"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </button>
+          <button id="slider_right" class="button">
+            <div class="content">
+              <svg
+                class="img"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5 12H19"
+                  stroke="parent"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M12 5L19 12L12 19"
+                  stroke="parent"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </button>
+        </div>
+        <div id="slider">
+          <div id="roll" class="roll">
+            <div class="slide">
+              <div class="content">
+                <div class="offer">
+                  <div class="offer_desc">
+                    <p class="title">Специальные предложения</p>
+                    <p class="addiction">
+                      на строительные материалы <br />
+                      и товары для ремонта
+                    </p>
+                  </div>
+                  <button class="button">
+                    <div class="content">
+                      <p>Подробнее</p>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="slide">
+              <div class="content">
+                <div class="offer">
+                  <div class="offer_desc">
+                    <p class="title">Распродажа инструментов</p>
+                    <p class="addiction">
+                      «СтройкаСтор» стремится сделать условия покупки
+                      максимально выгодными для каждого покупателя, поэтому на
+                      сайте регулярно появляются товары со скидкой
+                    </p>
+                  </div>
+                  <button class="button">
+                    <div class="content">
+                      <p>Подробнее</p>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="secondblock">
+      <div class="blockcontent">
+        <div class="promos">
+          <div class="title">
+            <p>Акции</p>
+            <button class="button">
+              <div class="content">
+                <p>Все акции</p>
+                <svg
+                  class="img"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18L15 12L9 6"
+                    stroke="parent"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div id="promoblock" class="promoblock"></div>
+          <script>
+            load_discounts();
+          </script>
+        </div>
+        <div class="categories">
+          <div class="title">
+            <p>Популярные категории</p>
+            <button class="button">
+              <div class="content">
+                <p>Все категории</p>
+                <svg
+                  class="img"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18L15 12L9 6"
+                    stroke="parent"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div id="categoriesblock" class="categoriesblock"></div>
+          <script>
+            load_categories();
+          </script>
+        </div>
+        <div class="products">
+          <div class="title">
+            <p>Популярные товары</p>
+          </div>
+          <div id="products_block" class="products_block"></div>
+          <script>
+            load_products();
+          </script>
+        </div>
+        <div class="brands">
+          <div class="title">
+            <p>Популярные бренды</p>
+            <button class="button">
+              <div class="content">
+                <p>Все бренды</p>
+                <svg
+                  class="img"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 18L15 12L9 6"
+                    stroke="parent"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+            </button>
+          </div>
+          <div id="brandsblock" class="brandsblock"></div>
+
+          <script>
+            load_brands();
+          </script>
+        </div>
+      </div>
+    </div>
+    <div class="comments">
+      <div class="blockcontent">
+        <div class="content">
+          <div class="title">
+            <p>Отзывы</p>
+            <div class="controls">
+              <button class="button" id="comments_left">
+                <div class="content">
+                  <svg
+                    class="img"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M19 12H5"
+                      stroke="parent"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 5L5 12L12 19"
+                      stroke="parent"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </button>
+              <button class="button" id="comments_right">
+                <div class="content">
+                  <svg
+                    class="img"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 12H19"
+                      stroke="parent"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M12 5L19 12L12 19"
+                      stroke="parent"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+              </button>
+            </div>
+          </div>
+          <div class="commentsblock">
+            <div class="roll" id="commentsblock"></div>
+            <script>
+              load_comments();
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="aboutcompany">
+      <div class="blockcontent">
+        <div class="content">
+          <div class="block">
+            <div class="text">
+              <p class="title">О компании</p>
+              <p class="desc">
+                В СтройкаСтор вы всегда можете купить все необходимые товары для
+                ремонта дома и дачи. Хотите сделать ремонт в квартире? Строите
+                загородный дом? Используйте строительные и отделочные материалы
+                из нашего каталога.<br /><br />
+                Быстрая доставка строительных товаров по низким ценам сделает
+                ваши покупки более приятными. Ремонт может стоить дешево, если
+                делать его с нами. Для вас всегда в наличии более 30 000 товаров
+                для строительства по низким ценам каждый день. СтройкаСтор — это
+                широкий ассортимент товаров для дома и ремонта недорого;
+                Возможность заказать строительные и отделочные материалы для
+                дома и дачи.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      load_footer($("body"));
+    </script>
+  </body>
+</html>

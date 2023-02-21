@@ -1,0 +1,193 @@
+@font-face {
+    font-family: "Manrope";
+    src: url("../font/Manrope-Light.eot");
+    src: url("../font/Manrope-Light.eot?#iefix") format("embedded-opentype"),
+        url("../font/Manrope-Light.woff2") format("woff2"),
+        url("../font/Manrope-Light.woff") format("woff"),
+        url("../font/Manrope-Light.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../font/Manrope-SemiBold.eot");
+    src: url("../font/Manrope-SemiBold.eot?#iefix") format("embedded-opentype"),
+        url("../font/Manrope-SemiBold.woff2") format("woff2"),
+        url("../font/Manrope-SemiBold.woff") format("woff"),
+        url("../font/Manrope-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../font/Manrope-ExtraBold.eot");
+    src: url("../font/Manrope-ExtraBold.eot?#iefix") format("embedded-opentype"),
+        url("../font/Manrope-ExtraBold.woff2") format("woff2"),
+        url("../font/Manrope-ExtraBold.woff") format("woff"),
+        url("../font/Manrope-ExtraBold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../font/Manrope-Medium.eot");
+    src: url("../font/Manrope-Medium.eot?#iefix") format("embedded-opentype"),
+        url("../font/Manrope-Medium.woff2") format("woff2"),
+        url("../font/Manrope-Medium.woff") format("woff"),
+        url("../font/Manrope-Medium.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../font/Manrope-Regular.eot");
+    src: url("../font/Manrope-Regular.eot?#iefix") format("embedded-opentype"),
+        url("../font/Manrope-Regular.woff2") format("woff2"),
+        url("../font/Manrope-Regular.woff") format("woff"),
+        url("../font/Manrope-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../font/Manrope-Bold.eot");
+    src: url("../font/Manrope-Bold.eot?#iefix") format("embedded-opentype"),
+        url("../font/Manrope-Bold.woff2") format("woff2"),
+        url("../font/Manrope-Bold.woff") format("woff"),
+        url("../font/Manrope-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url("../font/Manrope-ExtraLight.eot");
+    src: url("../font/Manrope-ExtraLight.eot?#iefix") format("embedded-opentype"),
+        url("../font/Manrope-ExtraLight.woff2") format("woff2"),
+        url("../font/Manrope-ExtraLight.woff") format("woff"),
+        url("../font/Manrope-ExtraLight.ttf") format("truetype");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+$white: #FFFFFF;
+$lightgray: #E8E9EA;
+$lightgray2: #D1D1D3;
+$gray: #F6F6F6;
+$yellow: #FCEC41;
+$gray2: #8B8D92;
+$darkgray: #5D6066;
+$grayblack: #454950;
+$darkgrayblack: #2F323A;
+$black: #171B24;
+
+html
+{
+    background-color: $darkgrayblack;
+}
+
+:root {
+    font-family: 'Manrope';
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope';
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+input:focus {
+    outline: none;
+}
+
+@mixin column {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    @include column;
+    width: 100%;
+}
+
+@mixin block {
+    @include column;
+    justify-content: center;
+    background-color: $white;
+}
+
+.blockcontent {
+    @include column;
+    justify-content: center;
+    max-width: 1440px;
+    align-self: center;
+    width: 100%;
+}
+
+@mixin title {
+    .title {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+        p {
+            font-size: 2.125rem;
+            font-weight: 600;
+        }
+
+        @include transparentbutton;
+    }
+}
+
+@mixin transparentbutton {
+    button {
+        border: 0.06rem solid $lightgray2;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 1rem 0.75rem 1.5rem;
+        background-color: $white;
+
+        p {
+            font-size: 1.125rem;
+            line-height: 1.33rem;
+        }
+
+        img {
+            height: 1.5rem;
+            aspect-ratio: 1/1;
+            margin-left: 0.5rem;
+
+        }
+    }
+
+    button:hover {
+        background-color: $black;
+    }
+}

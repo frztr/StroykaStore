@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/page.css" />
+    <link rel="stylesheet" href="style/notifications.css" />
+    <link rel="stylesheet" href="style/lk.css" />
+    <script src="js/jquery-3.6.3.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/page.js"></script>
+    <script src="js/lk.js"></script>
+  </head>
+  <body>
+    <script>
+      load_header($("body"));
+    </script>
+    <div class="firstblock">
+      <div class="blockcontent">
+        <div class="content">
+          <p class="title">Личный кабинет</p>
+          <div class="info">
+            <p class="form_title">Личная информация</p>
+            <div class="inputs">
+              <div class="input_for">
+                <p class="for">Имя</p>
+                <div class="input">
+                  <input id="lk_name" type="text" placeholder="Богдан" />
+                </div>
+              </div>
+              <div class="input_for">
+                <p class="for">Фамилия</p>
+                <div class="input">
+                  <input id="lk_surname" type="text" placeholder="Порникин" />
+                </div>
+              </div>
+              <div class="input_for">
+                <p class="for">Дата рождения</p>
+                <div class="input"><input id="lk_bdate" type="date" /></div>
+              </div>
+              <div class="input_for">
+                <p class="for">Телефон</p>
+                <div class="input">
+                  <input
+                    id="lk_phone"
+                    type="number"
+                    placeholder="+7 (359) 900-38-98"
+                    maxlength="11"
+                  />
+                  <p class="input_show"></p>
+                </div>
+              </div>
+              <div class="input_for">
+                <p class="for">E-mail</p>
+                <div class="input">
+                  <input
+                    id="lk_email"
+                    type="email"
+                    placeholder="youmail@mail.com"
+                  />
+                </div>
+                <div class="alert">
+                  <img src="images/alert-circle-outline.svg" alt="" srcset="">
+                  <p>Неверный формат эл. почты.</p>
+                </div>
+              </div>
+              <div class="input_for">
+                <p class="for">Новый пароль</p>
+                <form class="input" autocomplete="off">
+                  <input
+                    id="lk_password"
+                    type="password"
+                    placeholder="****************"
+                    autocomplete="off"
+                  />
+                </form>
+                <div class="alert">
+                  <img src="images/alert-circle-outline.svg" alt="" srcset="">
+                  <p>Пароли не совпадают.</p>
+                </div>
+              </div>
+              <div class="input_for">
+                <p class="for">Подтверждение пароля</p>
+                <form class="input" autocomplete="off">
+                  <input
+                    id="lk_confirm_password"
+                    type="password"
+                    placeholder="****************"
+                    autocomplete="off"
+                  />
+                </form>
+              </div>
+            </div>
+            <button class="button" id="save_changes">
+              <div class="content"><p>Сохранить</p></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      load_footer($("body"));
+    </script>
+  </body>
+</html>
