@@ -8,13 +8,18 @@ function load_brands() {
     },
     success: function (data) {
       data.forEach((brand) => {
-        $("#brandsblock").append(
-          `<div class="img">
-            <img src="images/` +
-            brand.img +
-            `" alt="" />
-            </div>`
-        );
+        // $("#brandsblock").append(
+        //   `<div class="img">
+        //     <img src="images/` +
+        //     brand.img +
+        //     `" alt="" />
+        //     </div>`
+        // );
+
+        var div = jQuery("<div>",{class:"img"});
+        var img = jQuery("<img>",{src:"images/"+brand.img });
+        img.appendTo(div);
+        div.appendTo("#brandsblock");
       });
     },
   });
@@ -30,7 +35,10 @@ function load_alphavite() {
     },
     success: function (alphs) {
       alphs.array.forEach((element) => {
-        $("#alphavite").append(`<button>` + element + `</button>`);
+        var button = jQuery("<button>");
+        button.innerText = element;
+        button.appendTo("#alphavite");
+        //$("#alphavite").append(`<button>` + element + `</button>`);
       });
       $("#alphavite button:nth-child(1)").addClass("checked");
     },
@@ -123,31 +131,57 @@ function load_result(data)
       complete: function () {
         $("#brands_list_content").empty();
         data.response.forEach((group) => {
-          var inside = "";
+        //   var inside = "";
 
-          group.list.forEach((item) => {
-            inside =
-              inside +
-              `<a href="" class="item">
-              <div class="content">
-                <img class="img" src="images/right.svg" />
-                <p>` +
-              item +
-              `</p>
-              </div>
-            </a>`;
+        //   group.list.forEach((item) => {
+        //     inside =
+        //       inside +
+        //       `<a href="" class="item">
+        //       <div class="content">
+        //         <img class="img" src="images/right.svg" />
+        //         <p>` +
+        //       item +
+        //       `</p>
+        //       </div>
+        //     </a>`;
+        //   });
+
+        //   $("#brands_list_content").append(
+        //     `<div class="list_item">
+        //   <p class="char">` +
+        //       group.char +
+        //       `</p>
+        //   <div class="items_div">` +
+        //       inside +
+        //       `</div>
+        // </div>`
+        //   );
+
+        var inside = [];
+        
+        group.list.forEach((item)=>{
+          var item = jQuery("<a>",{class:"item"});
+          var content = jQuery("<div>",{class:"content"});
+          var img = jQuery("<img>",{class:"img",src:"images/right.svg"});
+          var p = jQuery("<p>");
+          p.innerText = item;
+          img.appendTo(content);
+          p.appendTo(content);
+          content.appendTo(item);
+          inside.push(item);
+
+        });
+
+          var list_item = jQuery("<div>",{class:"list_item"});
+          var char = jQuery("<p>",{class:"char"});
+          var items_div = jQuery("<div>",{class:"items_div"});
+
+          char.appendTo(list_item);
+          inside.forEach(element => {
+            element.appendTo(items_div);
           });
-
-          $("#brands_list_content").append(
-            `<div class="list_item">
-          <p class="char">` +
-              group.char +
-              `</p>
-          <div class="items_div">` +
-              inside +
-              `</div>
-        </div>`
-          );
+          items_div.appendTo(list_item);
+          list_item.appendTo("#brands_list_content");
         });
         
         var actualheight = 0;

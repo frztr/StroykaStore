@@ -8,13 +8,18 @@ function load_brands() {
     },
     success: function (data) {
       data.forEach((brand) => {
-        $("#brandsblock").append(
-          `<div class="img">
-          <img src="images/` +
-            brand.img +
-            `" alt="" />
-          </div>`
-        );
+        // $("#brandsblock").append(
+        //   `<div class="img">
+        //     <img src="images/` +
+        //     brand.img +
+        //     `" alt="" />
+        //     </div>`
+        // );
+
+        var div = jQuery("<div>",{class:"img"});
+        var img = jQuery("<img>",{src:"images/"+brand.img });
+        img.appendTo(div);
+        div.appendTo("#brandsblock");
       });
     },
   });
@@ -29,21 +34,32 @@ function load_categories() {
       method: "getPopularCategories",
     },
     success: function (data) {
-      data.forEach((category) => {
-        $("#categoriesblock").append(
-          `<a href="" class="category">
-          <div class="name">
-          <p>` +
-            category.name +
-            `</p>
-          </div>
-          <div class="img">
-          <img src="images/` +
-            category.img +
-            `" alt="" srcset="" />
-          </div>
-        </a>`
-        );
+      data.forEach((item) => {
+        // $("#categoriesblock").append(
+        //   `<a href="" class="category">
+        //   <div class="name">
+        //   <p>` +
+        //     category.name +
+        //     `</p>
+        //   </div>
+        //   <div class="img">
+        //   <img src="images/` +
+        //     category.img +
+        //     `" alt="" srcset="" />
+        //   </div>
+        // </a>`
+        // );
+        var categoriesblock = $("#categoriesblock");
+        var category = jQuery("<a>",{class:"category"});
+        var name = jQuery("<div>",{class:"name"});
+        var p = jQuery("<p>",{class:"p"});
+        p.innerText = item.name;
+        var div_img = jQuery("<div>",{class:"img"});
+        var img = jQuery("<img>",{src:"images/"+item.img});
+        category.appendTo(categoriesblock);
+        name.appendTo(category);
+        p.appendTo(name);
+        img.appendTo(category);
       });
     },
   });
@@ -299,35 +315,6 @@ function load_comments() {
         text.appendTo(comment_content);
         date.appendTo(comment);
       });
-      // data.forEach((comment) => {
-      //   $("#commentsblock").append(
-      //     `<div class="comment">
-      //     <div class="comment_content">
-      //       <div class="head">
-      //         <img src="images/` +
-      //       comment.profile.img +
-      //       `" alt="" class="logo" />
-      //         <p class="name">` +
-      //       comment.profile.name +
-      //       `</p>
-      //         <img src="images/Quote.svg" alt="" class="quote" />
-      //       </div>
-      //       <p class="text">
-      //         ` +
-      //       comment.comment.text +
-      //       `
-      //       </p>
-      //     </div>
-      //     <p class="date">` +
-      //       new Date(comment.comment.date).toLocaleString("ru", {
-      //         day: "numeric",
-      //         month: "long",
-      //         year: "numeric",
-      //       }) +
-      //       `</p>
-      //   </div>`
-      //   );
-      // });
     },
   });
 }
@@ -361,35 +348,61 @@ $(document).on("keypress", ".counter input", function (e) {
 });
 
 function load_shopping_cart_notification(name, price, count, image) {
-  $("#notifications").append(
-    `<div class="shopping_cart_notification notification">
-  <div class="info">
-    <div class="product">
-      <img src="images/` +
-      image +
-      `" alt="" />
-      <div class="desc">
-        <div class="product_info">
-          <p class="name">
-            ` +
-      name +
-      `
-          </p>
-          <p class="price">` +
-      price +
-      ` ₽ x ` +
-      count +
-      ` шт.</p>
-        </div>
-        <a href="" class="get_to_cart"></a>
-      </div>
-    </div>
-  </div>
-  <button>
-    <img src="images/close.svg" alt="" />
-  </button>
-</div>`
-  );
+//   $("#notifications").append(
+//     `<div class="shopping_cart_notification notification">
+//   <div class="info">
+//     <div class="product">
+//       <img src="images/` +
+//       image +
+//       `" alt="" />
+//       <div class="desc">
+//         <div class="product_info">
+//           <p class="name">
+//             ` +
+//       name +
+//       `
+//           </p>
+//           <p class="price">` +
+//       price +
+//       ` ₽ x ` +
+//       count +
+//       ` шт.</p>
+//         </div>
+//         <a href="" class="get_to_cart"></a>
+//       </div>
+//     </div>
+//   </div>
+//   <button>
+//     <img src="images/close.svg" alt="" />
+//   </button>
+// </div>`
+//   );
+      var notifications = $("#notifications");
+      var shopping_cart_notification = jQuery("<div>",{class:"shopping_cart_notification notification"});
+      var info = jQuery("<div>",{class : "info"});
+      var product = jQuery("<div>",{class:"product"});
+      var img = jQuery("<img>",{src:"images/"+image});
+      var desc = jQuery("<div>",{class:"desc"});
+      var product_info = jQuery("<div>",{class:"product_info"});
+      var name = jQuery("<p>",{class:"name"});
+      name.innerText = name;
+      var price = jQuery("<p>",{class:"price"});
+      price.innerText = price +" ₽ x " + count + " шт.";
+      var get_to_cart = jQuery("<a>",{class:"get_to_cat"});
+      var button = jQuery("<button>");
+      var img_button = jQuery("<img>",{src:"images/close.svg"});
+
+      shopping_cart_notification.appendTo(notifications);
+      info.appendTo(shopping_cart_notification);
+      button.appendTo(shopping_cart_notification);
+      img_button.appendTo(button);
+      product.appendTo(info);
+      img.appendTo(product);
+      desc.appendTo(product);
+      product_info.appendTo(desc);
+      name.appendTo(product_info);
+      price.appendTo(product_info);
+      get_to_cart.appendTo(desc);
   if ($("#notifications")[0].children.length > 5) {
     fadeout($("#notifications")[0].children[0], 0);
   }
