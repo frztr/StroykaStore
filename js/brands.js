@@ -8,13 +8,6 @@ function load_brands() {
     },
     success: function (data) {
       data.forEach((brand) => {
-        // $("#brandsblock").append(
-        //   `<div class="img">
-        //     <img src="images/` +
-        //     brand.img +
-        //     `" alt="" />
-        //     </div>`
-        // );
 
         var div = jQuery("<div>",{class:"img"});
         var img = jQuery("<img>",{src:"images/"+brand.img });
@@ -36,9 +29,8 @@ function load_alphavite() {
     success: function (alphs) {
       alphs.array.forEach((element) => {
         var button = jQuery("<button>");
-        button.innerText = element;
+        button.text(element);
         button.appendTo("#alphavite");
-        //$("#alphavite").append(`<button>` + element + `</button>`);
       });
       $("#alphavite button:nth-child(1)").addClass("checked");
     },
@@ -160,15 +152,15 @@ function load_result(data)
         var inside = [];
         
         group.list.forEach((item)=>{
-          var item = jQuery("<a>",{class:"item"});
+          var item_div = jQuery("<a>",{class:"item"});
           var content = jQuery("<div>",{class:"content"});
           var img = jQuery("<img>",{class:"img",src:"images/right.svg"});
           var p = jQuery("<p>");
-          p.innerText = item;
+          p.text(item);
           img.appendTo(content);
           p.appendTo(content);
-          content.appendTo(item);
-          inside.push(item);
+          content.appendTo(item_div);
+          inside.push(item_div);
 
         });
 
@@ -177,6 +169,7 @@ function load_result(data)
           var items_div = jQuery("<div>",{class:"items_div"});
 
           char.appendTo(list_item);
+          char.text(group.char);
           inside.forEach(element => {
             element.appendTo(items_div);
           });

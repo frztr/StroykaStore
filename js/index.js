@@ -333,7 +333,7 @@ function load_shopping_cart_notification(name, price, count, image) {
       name_p.text(name);
       var price_p = jQuery("<p>",{class:"price"});
       price_p.text(price +" ₽ x " + count + " шт.");
-      var get_to_cart = jQuery("<a>",{class:"get_to_cat"});
+      var get_to_cart = jQuery("<a>",{class:"get_to_cart"});
       var button = jQuery("<button>");
       var img_button = jQuery("<img>",{src:"images/close.svg"});
 

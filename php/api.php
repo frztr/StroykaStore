@@ -183,7 +183,7 @@ function addToShoppingCart()
 {
     global $connection;
     $response = new stdClass();
-    if ($_POST['token'] != 0 && $_POST['productId'] != 0 && $_POST['count'] != 0) {
+    if ($_POST['token'] != '' && $_POST['productId'] != 0 && $_POST['count'] != 0) {
 
         $connection->query("SELECT profileId into @profileId FROM `access_token` WHERE Token = '" . $_POST['token'] . "' LIMIT 1;
         INSERT INTO `shoppingcart`(`ProfileId`, `ProductId`, `Count`) VALUES (@profileId," . $_POST['productId'] . "," . $_POST['count'] . ");");
