@@ -8,14 +8,6 @@ function load_brands() {
     },
     success: function (data) {
       data.forEach((brand) => {
-        // $("#brandsblock").append(
-        //   `<div class="img">
-        //     <img src="images/` +
-        //     brand.img +
-        //     `" alt="" />
-        //     </div>`
-        // );
-
         var div = jQuery("<div>",{class:"img"});
         var img = jQuery("<img>",{src:"images/"+brand.img });
         img.appendTo(div);
@@ -35,31 +27,19 @@ function load_categories() {
     },
     success: function (data) {
       data.forEach((item) => {
-        // $("#categoriesblock").append(
-        //   `<a href="" class="category">
-        //   <div class="name">
-        //   <p>` +
-        //     category.name +
-        //     `</p>
-        //   </div>
-        //   <div class="img">
-        //   <img src="images/` +
-        //     category.img +
-        //     `" alt="" srcset="" />
-        //   </div>
-        // </a>`
-        // );
         var categoriesblock = $("#categoriesblock");
         var category = jQuery("<a>",{class:"category"});
         var name = jQuery("<div>",{class:"name"});
-        var p = jQuery("<p>",{class:"p"});
-        p.innerText = item.name;
+        var p = jQuery("<p>");
+        p.text(item.name);
         var div_img = jQuery("<div>",{class:"img"});
         var img = jQuery("<img>",{src:"images/"+item.img});
+
         category.appendTo(categoriesblock);
         name.appendTo(category);
         p.appendTo(name);
-        img.appendTo(category);
+        img.appendTo(div_img);
+        div_img.appendTo(category);
       });
     },
   });
@@ -74,35 +54,39 @@ function load_products() {
       method: "getPopularProducts",
     },
     success: function (data) {
-      data.forEach((product) => {
-        $("#products_block").append(
-          `<div class="product" data-id="` +
-            product.id +
-            `">
-        <div class="img">
-          <img src="images/` +
-            product.img +
-            `" alt="" />
-        </div>
-        <div class="desc">
-          <div class="text">
-            <p class="name">
-              ` +
-            product.name +
-            `
-            </p>
-            <p class="price">` +
-            product.price +
-            ` ₽</p>
-          </div>
-          <div class="buy">
-            <button class="button">
-              <div class="content"><p>В корзину</p></div>
-            </button>
-            <div class="counter">
-              <button class="button">
-                <div class="content">
-                  <svg
+      data.forEach((product) => {       
+      var product_div = jQuery("<div>",{class:"product","data-id":product.id});
+      product_div.appendTo("#products_block");
+      var div_img = jQuery("<div>",{class:"img"});
+      div_img.appendTo(product_div);
+      var img = jQuery("<img>",{src:"images/"+product.img});
+      img.appendTo(div_img);
+      var div_desc = jQuery("<div>",{class:"desc"});
+      div_desc.appendTo(product_div);
+      var div_text = jQuery("<div>",{class:"text"});
+      div_text.appendTo(div_desc);
+      var p_name = jQuery("<p>",{class:"name"});
+      p_name.text(product.name);
+      p_name.appendTo(div_text);
+      var p_price = jQuery("<p>",{class:"price"});
+      p_price.text(product.price+" ₽");
+      p_price.appendTo(div_text);
+      var div_buy = jQuery("<div>",{class:"buy"});
+      div_buy.appendTo(div_desc);
+      var button_button1= jQuery("<button>",{class:"button"});
+      button_button1.appendTo(div_buy);
+      var div_content1 = jQuery("<div>",{class:"content"});
+      div_content1.appendTo(button_button1);
+      var p_d_c1 = jQuery("<p>");
+      p_d_c1.text("В корзину");
+      p_d_c1.appendTo(div_content1);
+      var counter = jQuery("<div>",{class:"counter"});
+      counter.appendTo(div_buy);
+      var button_button2 = jQuery("<button>",{class:"button"});
+      button_button2.appendTo(counter);
+      var div_content2 = jQuery("<div>",{class:"content"});
+      div_content2.appendTo(button_button2);
+      div_content2.append(`<svg
                     class="img"
                     width="24"
                     height="24"
@@ -124,14 +108,12 @@ function load_products() {
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
-                  </svg>
-                </div>
-              </button>
-              <input value="1" type="number" data-max="` +
-            product.countLeft +
-            `" />
-              <button class="button">
-                <div class="content">
+                  </svg>`);
+      var input = jQuery("<input>",{value:1,type:"number","data-max":product.countLeft});
+      input.appendTo(counter);
+      var button_button3 = jQuery("<button>",{class:"button"});
+      button_button3.appendTo(counter);
+      button_button3.append(`<div class="content">
                   <svg
                     class="img"
                     width="24"
@@ -148,13 +130,7 @@ function load_products() {
                       stroke-linejoin="round"
                     />
                   </svg>
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>`
-        );
+                </div>`);
       });
     },
   });
@@ -170,44 +146,50 @@ function load_discounts() {
     },
     success: function (data) {
       data.forEach((discount) => {
-        $("#promoblock").append(
-          `<div class="promo" data-id="` +
-            discount.id +
-            `">
-        <div class="img">
-          <img src="images/` +
-            discount.img +
-            `" alt="" />
-          <div class="promo_size">
-            <p>-` +
-            discount.size +
-            `%</p>
-          </div>
-        </div>
-        <div class="desc">
-          <div class="text">
-            <p class="name">
-              ` +
-            discount.name +
-            `
-            </p>
-            <div class="price">
-              <p class="today">` +
-            Math.round(discount.price * (1 - discount.size * 0.01)) +
-            ` ₽</p>
-              <p class="last">` +
-            discount.price +
-            ` ₽</p>
-            </div>
-          </div>
-          <div class="buy">
-            <button class="button">
-              <div class="content"><p>В корзину</p></div>
-            </button>
-            <div class="counter">
-              <button class="button">
-                <div class="content">
-                  <svg
+      var div_promo = jQuery("<div>",{class:"promo","data-id":discount.id});
+      div_promo.appendTo("#promoblock");
+      var div_img = jQuery("<div>",{class:"img"});
+      div_img.appendTo(div_promo);
+      var img = jQuery("<img>",{src:"images/"+discount.img});
+      img.appendTo(div_img);
+      var promo_size = jQuery("<div>",{class:"promo_size"});
+      promo_size.appendTo(div_img);
+      var p = jQuery("<p>");
+      p.text("-"+discount.size+"%");
+      p.appendTo(promo_size);
+      var div_desc = jQuery("<div>",{class:"desc"});
+      div_desc.appendTo(div_promo);
+      var text = jQuery("<div>",{class:"text"});
+      text.appendTo(div_desc);
+      var p_text = jQuery("<p>",{class:"name"});
+      p_text.text(discount.name);
+      var name = jQuery("<p>",{class:"name"});
+      name.text(discount.name);
+      name.appendTo(text);
+      var price = jQuery("<div>",{class:"price"});
+      price.appendTo(text);
+      var today = jQuery("<p>",{class:"today"});
+      today.text(Math.round(discount.price * (1 - discount.size * 0.01)) +` ₽`);
+      today.appendTo(price);
+      var last = jQuery("<p>",{class:"last"});
+      last.text(discount.price+` ₽`);
+      last.appendTo(price);
+      var div_buy = jQuery("<div>",{class:"buy"});
+      div_buy.appendTo(div_desc);
+      var button_button1= jQuery("<button>",{class:"button"});
+      button_button1.appendTo(div_buy);
+      var div_content1 = jQuery("<div>",{class:"content"});
+      div_content1.appendTo(button_button1);
+      var p_d_c1 = jQuery("<p>");
+      p_d_c1.text("В корзину");
+      p_d_c1.appendTo(div_content1);
+      var counter = jQuery("<div>",{class:"counter"});
+      counter.appendTo(div_buy);
+      var button_button2 = jQuery("<button>",{class:"button"});
+      button_button2.appendTo(counter);
+      var div_content2 = jQuery("<div>",{class:"content"});
+      div_content2.appendTo(button_button2);
+      div_content2.append(`<svg
                     class="img"
                     width="24"
                     height="24"
@@ -229,14 +211,12 @@ function load_discounts() {
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     />
-                  </svg>
-                </div>
-              </button>
-              <input value="1" type="number" data-max="` +
-            discount.countLeft +
-            `" />
-              <button class="button">
-                <div class="content">
+                  </svg>`);
+      var input = jQuery("<input>",{value:1,type:"number","data-max":discount.countLeft});
+      input.appendTo(counter);
+      var button_button3 = jQuery("<button>",{class:"button"});
+      button_button3.appendTo(counter);
+      button_button3.append(`<div class="content">
                   <svg
                     class="img"
                     width="24"
@@ -253,13 +233,7 @@ function load_discounts() {
                       stroke-linejoin="round"
                     />
                   </svg>
-                </div>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>`
-        );
+                </div>`);
       });
     },
   });
@@ -348,35 +322,6 @@ $(document).on("keypress", ".counter input", function (e) {
 });
 
 function load_shopping_cart_notification(name, price, count, image) {
-//   $("#notifications").append(
-//     `<div class="shopping_cart_notification notification">
-//   <div class="info">
-//     <div class="product">
-//       <img src="images/` +
-//       image +
-//       `" alt="" />
-//       <div class="desc">
-//         <div class="product_info">
-//           <p class="name">
-//             ` +
-//       name +
-//       `
-//           </p>
-//           <p class="price">` +
-//       price +
-//       ` ₽ x ` +
-//       count +
-//       ` шт.</p>
-//         </div>
-//         <a href="" class="get_to_cart"></a>
-//       </div>
-//     </div>
-//   </div>
-//   <button>
-//     <img src="images/close.svg" alt="" />
-//   </button>
-// </div>`
-//   );
       var notifications = $("#notifications");
       var shopping_cart_notification = jQuery("<div>",{class:"shopping_cart_notification notification"});
       var info = jQuery("<div>",{class : "info"});
@@ -384,10 +329,10 @@ function load_shopping_cart_notification(name, price, count, image) {
       var img = jQuery("<img>",{src:"images/"+image});
       var desc = jQuery("<div>",{class:"desc"});
       var product_info = jQuery("<div>",{class:"product_info"});
-      var name = jQuery("<p>",{class:"name"});
-      name.innerText = name;
-      var price = jQuery("<p>",{class:"price"});
-      price.innerText = price +" ₽ x " + count + " шт.";
+      var name_p = jQuery("<p>",{class:"name"});
+      name_p.text(name);
+      var price_p = jQuery("<p>",{class:"price"});
+      price_p.text(price +" ₽ x " + count + " шт.");
       var get_to_cart = jQuery("<a>",{class:"get_to_cat"});
       var button = jQuery("<button>");
       var img_button = jQuery("<img>",{src:"images/close.svg"});
@@ -400,8 +345,8 @@ function load_shopping_cart_notification(name, price, count, image) {
       img.appendTo(product);
       desc.appendTo(product);
       product_info.appendTo(desc);
-      name.appendTo(product_info);
-      price.appendTo(product_info);
+      name_p.appendTo(product_info);
+      price_p.appendTo(product_info);
       get_to_cart.appendTo(desc);
   if ($("#notifications")[0].children.length > 5) {
     fadeout($("#notifications")[0].children[0], 0);
